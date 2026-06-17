@@ -1,0 +1,201 @@
+﻿{% extends 'interview/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'interview/css/ats_score.css' %}">
+{% endblock %}
+
+{% block nav_ats %}active{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>ATS Score</h1>
+    <p>Check how well your resume passes ATS screening</p>
+</div>
+
+<div class="ats-grid">
+
+    <!-- LEFT: Score Circle + Breakdown -->
+    <div class="ats-left">
+
+        <!-- Score Display -->
+        <div class="card ats-score-card">
+            <h2 class="section-title">Your ATS Score</h2>
+            <div class="score-circle-wrap">
+                <div class="score-circle">
+                    <svg viewBox="0 0 120 120" width="160" height="160">
+                        <circle cx="60" cy="60" r="50"
+                            fill="none" stroke="var(--gray-100)"
+                            stroke-width="10"/>
+                        <circle cx="60" cy="60" r="50"
+                            fill="none"
+                            stroke="{% if ats_score >= 70 %}#16a34a{% elif ats_score >= 50 %}#ea580c{% else %}#dc2626{% endif %}"
+                            stroke-width="10"
+                            stroke-dasharray="{{ circumference }}"
+                            stroke-dashoffset="{{ dash_offset }}"
+                            stroke-linecap="round"
+                            transform="rotate(-90 60 60)"
+                            id="scoreArc"/>
+                        <text x="60" y="55" text-anchor="middle"
+                              font-size="22" font-weight="700"
+                              fill="{% if ats_score >= 70 %}#16a34a{% elif ats_score >= 50 %}#ea580c{% else %}#dc2626{% endif %}">
+                            {{ ats_score }}%
+                        </text>
+                        <text x="60" y="72" text-anchor="middle"
+                              font-size="10" fill="#6b7280">
+                            {% if ats_score >= 70 %}Good Match{% elif ats_score >= 50 %}Fair Match{% else %}Needs Work{% endif %}
+                        </text>
+                    </svg>
+                </div>
+                <p class="score-desc">
+                    You have a {% if ats_score >= 70 %}good{% elif ats_score >= 50 %}fair{% else %}low{% endif %}
+                    chance of passing ATS screening
+                </p>
+            </div>
+
+            <!-- Progress Breakdown -->
+            <div class="breakdown-list">
+                <div class="breakdown-row">
+                    <span class="breakdown-label">Keywords Match</span>
+                    <div class="breakdown-bar-wrap">
+                        <div class="progress-bar">
+                            <div class="progress-fill {% if keywords_score >= 70 %}green{% elif keywords_score >= 50 %}{% else %}red{% endif %}"
+                                 style="width:{{ keywords_score|default:ats_score }}%"></div>
+                        </div>
+                    </div>
+                    <span class="breakdown-pct">{{ keywords_score|default:ats_score }}%</span>
+                </div>
+                <div class="breakdown-row">
+                    <span class="breakdown-label">Skills Match</span>
+                    <div class="breakdown-bar-wrap">
+                        <div class="progress-bar">
+                            <div class="progress-fill {% if skills_score >= 70 %}green{% endif %}"
+                                 style="width:{{ skills_score|default:ats_score }}%"></div>
+                        </div>
+                    </div>
+                    <span class="breakdown-pct">{{ skills_score|default:ats_score }}%</span>
+                </div>
+                <div class="breakdown-row">
+                    <span class="breakdown-label">Experience Match</span>
+                    <div class="breakdown-bar-wrap">
+                        <div class="progress-bar">
+                            <div class="progress-fill"
+                                 style="width:{{ experience_score|default:ats_score }}%"></div>
+                        </div>
+                    </div>
+                    <span class="breakdown-pct">{{ experience_score|default:ats_score }}%</span>
+                </div>
+                <div class="breakdown-row">
+                    <span class="breakdown-label">Format Score</span>
+                    <div class="breakdown-bar-wrap">
+                        <div class="progress-bar">
+                            <div class="progress-fill"
+                                 style="width:{{ format_score|default:ats_score }}%"></div>
+                        </div>
+                    </div>
+                    <span class="breakdown-pct">{{ format_score|default:ats_score }}%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Score Breakdown Detail -->
+        <div class="card">
+            <h2 class="section-title">Score Breakdown</h2>
+            <div class="detail-breakdown">
+                <div class="db-item">
+                    <div class="db-dot green"></div>
+                    <div class="db-info">
+                        <strong>Keywords</strong>
+                        <span>Very Good match with job description</span>
+                    </div>
+                    <span class="db-score">{{ keywords_score|default:ats_score }}%</span>
+                </div>
+                <div class="db-item">
+                    <div class="db-dot green"></div>
+                    <div class="db-info">
+                        <strong>Skills</strong>
+                        <span>Good match with required skills</span>
+                    </div>
+                    <span class="db-score">{{ skills_score|default:ats_score }}%</span>
+                </div>
+                <div class="db-item">
+                    <div class="db-dot {% if interview.experience %}green{% else %}orange{% endif %}"></div>
+                    <div class="db-info">
+                        <strong>Experience</strong>
+                        <span>{% if interview.experience %}Relevant experience found{% else %}Needs educational requirements{% endif %}</span>
+                    </div>
+                    <span class="db-score">{{ experience_score|default:ats_score }}%</span>
+                </div>
+                <div class="db-item">
+                    <div class="db-dot blue"></div>
+                    <div class="db-info">
+                        <strong>Format</strong>
+                        <span>ATS-friendly resume format</span>
+                    </div>
+                    <span class="db-score">{{ format_score|default:ats_score }}%</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT: Recommendations -->
+    <div class="ats-right">
+        <div class="card">
+            <h2 class="section-title">Recommendations</h2>
+            <div class="reco-list">
+                {% if ats_score < 90 %}
+                <div class="reco-item">
+                    <i class="fa-solid fa-plus reco-icon blue"></i>
+                    <span>Add more industry keywords</span>
+                </div>
+                {% endif %}
+                <div class="reco-item">
+                    <i class="fa-solid fa-check reco-icon green"></i>
+                    <span>Include more quantifiable achievements</span>
+                </div>
+                <div class="reco-item">
+                    <i class="fa-solid fa-check reco-icon green"></i>
+                    <span>Optimize your summary section</span>
+                </div>
+                {% if not interview.certifications %}
+                <div class="reco-item">
+                    <i class="fa-solid fa-plus reco-icon blue"></i>
+                    <span>Add relevant certifications</span>
+                </div>
+                {% endif %}
+                <div class="reco-item">
+                    <i class="fa-solid fa-check reco-icon green"></i>
+                    <span>Use more action verbs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overall summary -->
+        <div class="card ats-summary-card">
+            <div class="ats-summary-score
+                {% if ats_score >= 70 %}green{% elif ats_score >= 50 %}orange{% else %}red{% endif %}">
+                {{ ats_score }}%
+            </div>
+            <p class="ats-summary-label">Overall ATS Score</p>
+            <p class="ats-summary-desc">
+                {% if ats_score >= 70 %}
+                    Your resume is well-optimized for ATS systems. Keep improving!
+                {% elif ats_score >= 50 %}
+                    Your resume has potential. Follow the recommendations to improve.
+                {% else %}
+                    Your resume needs significant improvement for ATS systems.
+                {% endif %}
+            </p>
+        </div>
+
+        <a href="{% url 'skills_page' interview.interview_id %}" class="btn btn-primary btn-full">
+            <i class="fa-solid fa-layer-group"></i> View Detected Skills
+        </a>
+        <a href="{% url 'resume_analysis' interview.interview_id %}" class="btn btn-secondary btn-full" style="margin-top:10px;">
+            <i class="fa-regular fa-file-lines"></i> Full Resume Analysis
+        </a>
+    </div>
+
+</div>
+{% endblock %}

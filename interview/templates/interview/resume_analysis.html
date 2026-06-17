@@ -1,0 +1,378 @@
+{% extends 'interview/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'interview/css/resume_analysis.css' %}">
+{% endblock %}
+
+{% block nav_resume %}active{% endblock %}
+
+{% block content %}
+<div class="page-header ra-header">
+    <div>
+        <h1>Resume Analysis</h1>
+        <p>Detailed analysis of your resume</p>
+    </div>
+    <div class="ra-header-actions">
+        <a href="{% url 'download_report' interview.interview_id %}" class="btn btn-secondary">
+            <i class="fa-solid fa-download"></i> Download Report
+        </a>
+        <a href="{% url 'home' %}" class="btn btn-primary">
+            <i class="fa-solid fa-rotate"></i> Re-analyze
+        </a>
+    </div>
+</div>
+
+<div class="ra-grid">
+
+    <!-- LEFT: Overview + Sections -->
+    <div class="ra-left">
+
+        <!-- Resume Overview Card -->
+        <div class="card ra-overview-card">
+            <h2 class="section-title">Resume Overview</h2>
+            <div class="resume-overview-row">
+                <div class="ro-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                <div class="ro-info">
+                    <strong>{{ interview.name|default:"Resume" }}'s Resume</strong>
+                    <span>Uploaded on {{ interview.created_at|date:"d M Y, h:i A" }}</span>
+                </div>
+                <span class="badge badge-green">Analyzed</span>
+            </div>
+        </div>
+
+        <!-- Resume Sections -->
+        <div class="card">
+            <h2 class="section-title">Resume Sections</h2>
+            <div class="sections-list">
+
+                <div class="section-row">
+                    <div class="section-icon blue"><i class="fa-solid fa-address-card"></i></div>
+                    <div class="section-info">
+                        <strong>Contact Information</strong>
+                        <span>
+                            {{ interview.email|default:"—" }}
+                            {% if interview.phone %} | {{ interview.phone }}{% endif %}
+                        </span>
+                    </div>
+                    <span class="badge badge-green">Good</span>
+                </div>
+
+                {% if interview.experience %}
+                <div class="section-row">
+                    <div class="section-icon purple"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="section-info">
+                        <strong>Work Experience</strong>
+                        <span>{{ interview.experience|length }} position{{ interview.experience|length|pluralize }} found</span>
+                    </div>
+                    <span class="badge badge-green">Excellent</span>
+                </div>
+                {% endif %}
+
+                {% if interview.education %}
+                <div class="section-row">
+                    <div class="section-icon orange"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="section-info">
+                        <strong>Education</strong>
+                        <span>{{ interview.education.0|default:"Details available" }}</span>
+                    </div>
+                    <span class="badge badge-green">Good</span>
+                </div>
+                {% endif %}
+
+                {% if interview.skills %}
+                <div class="section-row">
+                    <div class="section-icon green"><i class="fa-solid fa-code"></i></div>
+                    <div class="section-info">
+                        <strong>Skills</strong>
+                        <span>{{ interview.skills|length }} technical skill{{ interview.skills|length|pluralize }} identified</span>
+                    </div>
+                    <span class="badge badge-green">Excellent</span>
+                </div>
+                {% endif %}
+
+                {% if interview.projects %}
+                <div class="section-row">
+                    <div class="section-icon blue"><i class="fa-solid fa-diagram-project"></i></div>
+                    <div class="section-info">
+                        <strong>Projects</strong>
+                        <span>{{ interview.projects|length }} relevant project{{ interview.projects|length|pluralize }} found</span>
+                    </div>
+                    <span class="badge badge-green">Good</span>
+                </div>
+                {% endif %}
+
+                {% if interview.certifications %}
+                <div class="section-row">
+                    <div class="section-icon orange"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="section-info">
+                        <strong>Certifications</strong>
+                        <span>{{ interview.certifications|length }} certification{{ interview.certifications|length|pluralize }} found</span>
+                    </div>
+                    <span class="badge badge-orange">Fair</span>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+
+        <!-- Experience Details -->
+        {% if experience_structured %}
+        <div class="card">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="exp-list">
+                {% for exp in experience_structured %}
+                <div class="exp-entry">
+                    <div class="exp-entry-header">
+                        <div class="exp-dot"><i class="fa-solid fa-circle"></i></div>
+                
+                        <div class="exp-entry-info">
+                            {% if exp.title %}
+                            <span class="exp-title">{{ exp.title }}</span>
+                            {% endif %}
+                            {% if exp.company %}
+                            <span class="exp-company">{{ exp.company }}</span>
+                            {% endif %}
+                            {% if exp.date %}
+                            <span class="exp-date">{{ exp.date }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if exp.bullets %}
+                    <div class="exp-bullets">
+                        {% for bullet in exp.bullets %}
+                        <div class="exp-bullet-item">
+                            <span class="exp-bullet-dot">•</span>
+                            <span>{{ bullet }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% elif interview.experience %}
+        <div class="card">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="detail-list">
+                {% for exp in interview.experience %}
+                <div class="detail-item">
+                    <i class="fa-solid fa-circle-dot detail-bullet"></i>
+                    <span>{{ exp }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        <!-- Education Details -->
+        {% if education_structured %}
+        <div class="card">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-list">
+                {% for edu in education_structured %}
+                <div class="edu-entry">
+                    <div class="edu-entry-header">
+                        <div class="exp-dot"><i class="fa-solid fa-circle"></i></div>
+                        <div class="edu-entry-info">
+                            {% if edu.degree %}
+                            <span class="edu-degree">{{ edu.degree }}</span>
+                            {% endif %}
+                            {% if edu.institution %}
+                            <span class="edu-institution">{{ edu.institution }}</span>
+                            {% endif %}
+                            {% if edu.year %}
+                            <span class="exp-date">{{ edu.year }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if edu.details %}
+                    <div class="exp-bullets">
+                        {% for detail in edu.details %}
+                        <div class="exp-bullet-item">
+                            <span class="exp-bullet-dot">•</span>
+                            <span>{{ detail }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% if not forloop.last %}
+                <hr class="edu-divider">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% elif interview.education %}
+        <div class="card">
+            <h2 class="section-title">Education</h2>
+            <div class="detail-list">
+                {% for edu in interview.education %}
+                <div class="detail-item">
+                    <i class="fa-solid fa-circle-dot detail-bullet"></i>
+                    <span>{{ edu }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        <!-- Projects Details -->
+        {% if projects_structured %}
+        <div class="card">
+            <h2 class="section-title">Projects</h2>
+            <div class="proj-list">
+                {% for proj in projects_structured %}
+                <div class="proj-entry">
+                    <div class="proj-entry-header">
+                        <div class="exp-dot"><i class="fa-solid fa-circle"></i></div>
+                        <div class="proj-entry-info">
+                            <span class="proj-name">{{ proj.name }}</span>
+                            {% if proj.date %}
+                            <span class="exp-date">{{ proj.date }}</span>
+                            {% endif %}
+                            {% if proj.tools %}
+                            <span class="proj-tools">
+                                <i class="fa-solid fa-wrench"></i>
+                                {{ proj.tools }}
+                            </span>
+                            {% endif %}
+                            {% if proj.link %}
+                            <a href="{{ proj.link }}" target="_blank" class="proj-link">
+                                <i class="fa-brands fa-github"></i>
+                                View on GitHub
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if proj.description %}
+                    <div class="exp-bullets">
+                        <div class="exp-bullet-item">
+                            <span class="exp-bullet-dot">•</span>
+                            <span>{{ proj.description }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                {% if not forloop.last %}
+                <hr class="edu-divider">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% elif interview.projects %}
+        <div class="card">
+            <h2 class="section-title">Projects</h2>
+            <div class="detail-list">
+                {% for proj in interview.projects %}
+                <div class="detail-item">
+                    <i class="fa-solid fa-circle-dot detail-bullet"></i>
+                    <span>{{ proj }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <!-- RIGHT: AI Summary + Strengths -->
+    <div class="ra-right">
+
+        <!-- AI Summary -->
+        <div class="card ai-summary-card">
+            <h2 class="section-title">AI Summary</h2>
+            {% if summary_lines %}
+            <div class="summary-structured">
+                {% for item in summary_lines %}
+                <div class="summary-row">
+                    {% if item.key %}
+                    <span class="summary-key">{{ item.key }}:</span>
+                    <span class="summary-val">{{ item.value }}</span>
+                    {% else %}
+                    <span class="summary-val full">{{ item.value }}</span>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>  
+            {% else %}
+            <p class="ai-summary-text">Resume has been analyzed. Navigate to sections below.</p>
+            {% endif %}
+        </div>
+
+        <!-- Strengths -->
+        <div class="card">
+            <h2 class="section-title">Strengths</h2>
+            <div class="strength-list">
+                {% if interview.skills %}
+                <div class="strength-item">
+                    <i class="fa-solid fa-circle-check strength-icon green"></i>
+                    <span>Strong technical skills ({{ interview.skills|length }} detected)</span>
+                </div>
+                {% endif %}
+                {% if interview.projects %}
+                <div class="strength-item">
+                    <i class="fa-solid fa-circle-check strength-icon green"></i>
+                    <span>Good project experience</span>
+                </div>
+                {% endif %}
+                {% if interview.experience %}
+                <div class="strength-item">
+                    <i class="fa-solid fa-circle-check strength-icon green"></i>
+                    <span>Relevant work experience</span>
+                </div>
+                {% endif %}
+                {% if interview.education %}
+                <div class="strength-item">
+                    <i class="fa-solid fa-circle-check strength-icon green"></i>
+                    <span>Clear education background</span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Areas to Improve -->
+        <div class="card">
+            <h2 class="section-title">Areas to Improve</h2>
+            <div class="improve-list">
+                <div class="improve-item">
+                    <i class="fa-solid fa-triangle-exclamation improve-icon orange"></i>
+                    <span>Add more quantifiable achievements</span>
+                </div>
+                {% if not interview.certifications %}
+                <div class="improve-item">
+                    <i class="fa-solid fa-triangle-exclamation improve-icon orange"></i>
+                    <span>Include more certifications</span>
+                </div>
+                {% endif %}
+                <div class="improve-item">
+                    <i class="fa-solid fa-triangle-exclamation improve-icon orange"></i>
+                    <span>Improve summary section</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Skills -->
+        {% if interview.skills %}
+        <div class="card">
+            <h2 class="section-title">Detected Skills</h2>
+            <div class="skills-wrap">
+                {% for skill in interview.skills %}
+                    <span class="skill-chip">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Actions -->
+        <div class="ra-actions">
+            <a href="{% url 'ats_score' interview.interview_id %}" class="btn btn-primary btn-full">
+                <i class="fa-regular fa-circle-check"></i> View ATS Score
+            </a>
+            <a href="{% url 'questions_page' interview.interview_id %}" class="btn btn-secondary btn-full">
+                <i class="fa-regular fa-message"></i> View Questions
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

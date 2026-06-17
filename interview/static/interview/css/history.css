@@ -1,0 +1,140 @@
+.history-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.hist-stat {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.hist-stat-icon {
+    width: 44px; height: 44px;
+    border-radius: var(--radius-md);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+.hist-stat-icon.blue   { background: var(--blue-light);   color: var(--blue); }
+.hist-stat-icon.green  { background: var(--green-light);  color: var(--green); }
+.hist-stat-icon.orange { background: var(--orange-light); color: var(--orange); }
+
+.stat-value.green  { color: var(--green); }
+.stat-value.blue   { color: var(--blue); }
+.stat-value.orange { color: var(--orange); }
+
+/* TABLE */
+.hist-name  { font-size: 13px; font-weight: 600; color: var(--gray-800); }
+.hist-email { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+
+.score-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.score-pill.green  { background: var(--green-light); color: var(--green); }
+.score-pill.orange { background: var(--orange-light); color: var(--orange); }
+.score-pill.red    { background: var(--red-light); color: var(--red); }
+
+.hist-actions { display: flex; gap: 6px; }
+
+.empty-row {
+    text-align: center;
+    padding: 40px !important;
+    color: var(--gray-400);
+    font-size: 14px;
+}
+.empty-row a { color: var(--blue); font-weight: 600; }
+
+/* TOP RESUME */
+.top-resume-card { margin-top: 20px; }
+.top-resume-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 14px;
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+}
+.top-resume-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.top-resume-info strong { font-size: 14px; font-weight: 600; color: var(--gray-800); }
+.top-resume-info span   { font-size: 12px; color: var(--gray-500); }
+.top-resume-score {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--green);
+}
+
+@media (max-width: 900px) {
+    .history-stats-row { grid-template-columns: 1fr 1fr; }
+}
+/* SUMMARY MODAL */
+.summary-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+.summary-modal-overlay.active { display: flex; }
+
+.summary-modal-box {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    width: 540px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+}
+.summary-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--gray-200);
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    z-index: 1;
+}
+.modal-close-btn {
+    background: var(--gray-100);
+    border: none;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--gray-600);
+    display: flex; align-items: center; justify-content: center;
+}
+.modal-close-btn:hover { background: var(--gray-200); }
+
+.summary-modal-body {
+    padding: 20px 24px;
+}
+
+/* Shared summary styles — used in both modal and resume_analysis page */
+.summary-structured { display: flex; flex-direction: column; gap: 6px; }
+.summary-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+.summary-row:last-child { border-bottom: none; }
+.summary-key {
+    font-weight: 700;
+    color: var(--blue);
+    min-width: 130px;
+    flex-shrink: 0;
+}
+.summary-val { color: var(--gray-700); line-height: 1.5; }
+.summary-val.full { color: var(--gray-600); font-style: italic; }

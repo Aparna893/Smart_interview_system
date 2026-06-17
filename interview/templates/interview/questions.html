@@ -1,0 +1,204 @@
+{% extends 'interview/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'interview/css/questions.css' %}">
+{% endblock %}
+
+{% block nav_questions %}active{% endblock %}
+
+{% block content %}
+
+<input type="hidden" id="maxQuestions" value="{{ interview.question_count }}">
+
+<!-- PAGE HEADER -->
+<div class="page-header q-header">
+    <div>
+        <h1>{% if finalized %}Finalized Interview Questions{% else %}Generated Questions{% endif %}</h1>
+        <p>{% if finalized %}Questions selected for this interview session{% else %}Use Next / Previous to browse, then select exactly {{ interview.question_count }} question(s){% endif %}</p>
+    </div>
+</div>
+
+{% if error %}
+<div class="alert-error">
+    <i class="fa-solid fa-triangle-exclamation"></i> {{ error }}
+</div>
+{% endif %}
+
+<!-- SELECTION COUNTER (only when not finalized) -->
+{% if not finalized %}
+<div class="selection-banner">
+    <span>Select exactly <strong>{{ interview.question_count }}</strong> question(s) to finalize the interview</span>
+    <span id="selectionCounter" class="selection-count">0 / {{ interview.question_count }} selected</span>
+</div>
+{% endif %}
+
+<!-- QUESTIONS FORM -->
+<form method="POST" id="questionsForm">
+    {% csrf_token %}
+
+    {% for skill, questions in questions.items %}
+    {% if questions %}
+    <div class="card skill-block">
+
+        <!-- Skill header row -->
+        <div class="skill-block-header">
+            <div class="skill-name-badge">
+                <i class="fa-solid fa-code"></i>
+                {{ skill }}
+            </div>
+            {% if not finalized %}
+            <span class="skill-q-count">{{ questions|length }} question{{ questions|length|pluralize }}</span>
+            {% endif %}
+        </div>
+
+        <!-- SLIDER -->
+        <div class="question-slider" id="slider-{{ forloop.counter }}">
+            {% for q in questions %}
+            <div class="single-question" style="display:{% if forloop.first %}block{% else %}none{% endif %};">
+
+                <!-- Question number indicator -->
+                <div class="q-slide-indicator">
+                    <span class="q-slide-num">Question {{ forloop.counter }} of {{ questions|length }}</span>
+                    <div class="q-slide-dots">
+                        {% for dot in questions %}
+                        <span class="q-dot {% if forloop.counter == forloop.parentloop.counter %}active{% endif %}"></span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label class="q-label {% if not finalized %}selectable{% endif %}">
+                    {% if not finalized %}
+                    <input
+                        type="checkbox"
+                        name="selected_questions"
+                        value='{"question":"{{ q.question|escapejs }}","skill":"{{ skill|escapejs }}","difficulty":"{{ q.difficulty|escapejs }}","type":"{{ q.type|escapejs }}"}'
+                        class="question-checkbox"
+                    >
+                    <span class="q-custom-check"><i class="fa-solid fa-check"></i></span>
+                    {% endif %}
+
+                    <div class="q-content">
+                        <p class="q-text">{{ q.question }}</p>
+                        <div class="q-meta">
+                            <span class="badge badge-blue">{{ q.difficulty }}</span>
+                            <span class="badge badge-gray">{{ q.type }}</span>
+                        </div>
+                    </div>
+                </label>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- PREV / NEXT BUTTONS -->
+        {% if not finalized %}
+        <div class="slider-nav">
+            <button type="button"
+                    class="btn btn-secondary btn-sm"
+                    onclick="previousQuestion('slider-{{ forloop.counter }}')">
+                <i class="fa-solid fa-chevron-left"></i> Previous
+            </button>
+            <button type="button"
+                    class="btn btn-primary btn-sm"
+                    onclick="nextQuestion('slider-{{ forloop.counter }}')">
+                Next <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+    {% empty %}
+    <div class="card empty-questions-card">
+        <i class="fa-regular fa-message"></i>
+        <p>No questions generated yet.</p>
+        <span>Go back to the dashboard and generate questions first.</span>
+        <a href="{% url 'home' %}" class="btn btn-primary" style="margin-top:12px;">Go to Dashboard</a>
+    </div>
+    {% endfor %}
+
+    <!-- FINALIZE BUTTON -->
+    {% if not finalized and questions %}
+    <div class="q-footer">
+        <button type="submit" class="btn btn-primary btn-lg" id="finalizeBtn">
+            <i class="fa-solid fa-check"></i> Finalize Interview
+        </button>
+    </div>
+    {% endif %}
+
+</form>
+
+<!-- CANDIDATE LINK (after finalized) -->
+{% if finalized %}
+<div class="card candidate-link-card">
+    <h2 class="section-title">
+        <i class="fa-solid fa-link" style="color:var(--blue)"></i>
+        Candidate Interview Link
+    </h2>
+    <p style="font-size:13px;color:var(--gray-500);margin-bottom:16px;">
+        Share this link with the candidate to begin the interview session.
+    </p>
+    <div class="link-row">
+        <input
+            type="text"
+            id="candidateLink"
+            value="{{ request.scheme }}://{{ request.get_host }}/candidate/{{ interview.interview_id }}/"
+            readonly
+            class="form-input link-input"
+        >
+        <button type="button" class="btn btn-primary" onclick="copyCandidateLink()">
+            <i class="fa-regular fa-copy"></i> Copy Link
+        </button>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+
+{% block extra_js %}
+<script src="{% static 'interview/js/home.js' %}"></script>
+<script>
+/* ── COPY CANDIDATE LINK ── */
+function copyCandidateLink() {
+    const input = document.getElementById('candidateLink');
+    input.select();
+    input.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(input.value);
+    const btn = input.nextElementSibling;
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+    setTimeout(() => { btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Link'; }, 2000);
+}
+
+/* ── FORM SUBMIT VALIDATION ── */
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('questionsForm');
+    if (!form) return;
+
+    const maxInput     = document.getElementById('maxQuestions');
+    const maxQuestions = Number(maxInput ? maxInput.value : 10) || 10;
+
+    form.addEventListener('submit', function (e) {
+        const checked = document.querySelectorAll('.question-checkbox:checked').length;
+
+        if (checked === 0) {
+            e.preventDefault();
+            alert('Please select at least 1 question before finalizing.');
+            return;
+        }
+        if (checked > maxQuestions) {
+            e.preventDefault();
+            alert(`You selected ${checked} questions but the limit is ${maxQuestions}. Please uncheck ${checked - maxQuestions} question(s).`);
+        }
+    });
+});
+
+/* ── HIGHLIGHT SELECTED QUESTION LABEL ── */
+document.addEventListener('change', function(e) {
+    if (!e.target.classList.contains('question-checkbox')) return;
+    const label = e.target.closest('.q-label');
+    if (label) label.classList.toggle('checked', e.target.checked);
+});
+</script>
+{% endblock %}

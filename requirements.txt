@@ -1,0 +1,16 @@
+pytesseract
+opencv-python
+Pillow
+transformers
+torch
+torchvision
+sentencepiece
+pdf2image
+pymupdf
+edge-tts
+pymongo
+django
+requests
+nltk
+scikit-learn
+python-dotenv

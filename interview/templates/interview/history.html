@@ -1,0 +1,180 @@
+{% extends 'interview/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'interview/css/history.css' %}">
+{% endblock %}
+
+{% block nav_history %}active{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Interview History</h1>
+    <p>Your interview practice history</p>
+</div>
+
+<!-- STATS ROW -->
+<div class="history-stats-row">
+    <div class="stat-card hist-stat">
+        <div class="hist-stat-icon blue"><i class="fa-regular fa-calendar"></i></div>
+        <div>
+            <div class="stat-value blue">{{ total_interviews }}</div>
+            <div class="stat-sub">Total Sessions</div>
+        </div>
+    </div>
+    <div class="stat-card hist-stat">
+        <div class="hist-stat-icon green"><i class="fa-solid fa-chart-line"></i></div>
+        <div>
+            <div class="stat-value green">{{ average_score }}%</div>
+            <div class="stat-sub">Average Score</div>
+        </div>
+    </div>
+    <div class="stat-card hist-stat">
+        <div class="hist-stat-icon blue"><i class="fa-regular fa-message"></i></div>
+        <div>
+            <div class="stat-value blue">{{ total_questions }}</div>
+            <div class="stat-sub">Questions Answered</div>
+        </div>
+    </div>
+    <div class="stat-card hist-stat">
+        <div class="hist-stat-icon orange"><i class="fa-regular fa-clock"></i></div>
+        <div>
+            <div class="stat-value orange">{{ completed_interviews }}</div>
+            <div class="stat-sub">Days Active</div>
+        </div>
+    </div>
+</div>
+
+<!-- TOP RESUME — moved to top -->
+{% if best_resume %}
+<div class="card top-resume-card">
+    <h2 class="section-title">Top Performing Resume</h2>
+    <div class="top-resume-row">
+        <div class="top-resume-info">
+            <strong>{{ best_resume.name }}</strong>
+            <span>{{ best_resume.email }}</span>
+        </div>
+        <div class="top-resume-score">{{ best_score }}%</div>
+        <a href="{% url 'review_interview' best_resume.interview_id %}" class="btn btn-primary btn-sm">
+            View Review
+        </a>
+    </div>
+</div>
+{% endif %}
+
+<!-- TABLE -->
+<div class="card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Score</th>
+                <th>Questions</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for interview in interviews %}
+            <tr>
+                <td>{{ interview.created_at|date:"d M Y" }}</td>
+                <td>
+                    <div class="hist-name">{{ interview.name|default:"—" }}</div>
+                    <div class="hist-email">{{ interview.email|default:"" }}</div>
+                </td>
+                <td><span class="badge badge-blue">Technical</span></td>
+                <td>
+                    {% if interview.overall_score %}
+                        <span class="score-pill
+                            {% if interview.overall_score >= 70 %}green
+                            {% elif interview.overall_score >= 50 %}orange
+                            {% else %}red{% endif %}">
+                            {{ interview.overall_score }}%
+                        </span>
+                    {% else %}—{% endif %}
+                </td>
+                <td>{{ interview.question_count|default:"—" }}</td>
+                <td>
+                    <span class="badge
+                        {% if interview.status == 'completed' %}badge-green
+                        {% else %}badge-orange{% endif %}">
+                        {{ interview.status|capfirst }}
+                    </span>
+                </td>
+                <td>
+                    <div class="hist-actions">
+                        {% if interview.status == 'completed' %}
+                        <a href="{% url 'review_interview' interview.interview_id %}"
+                            class="btn btn-secondary btn-sm">Review</a>
+                        {% else %}
+                        <a href="{% url 'questions_page' interview.interview_id %}"
+                            class="btn btn-primary btn-sm">Continue</a>
+                        {% endif %}
+                        {% if interview.summary_text %}
+                        <button class="btn btn-outline btn-sm"
+                            onclick="showSummary(`{{ interview.summary_text|escapejs }}`)">
+                        Summary
+                        </button>
+                        {% endif %}
+                        {% if interview.resume_pdf %}
+                        <a href="{{ interview.resume_pdf }}" target="_blank"
+                           class="btn btn-secondary btn-sm">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7" class="empty-row">
+                    No interviews yet. <a href="{% url 'home' %}">Upload a resume</a> to get started.
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<!-- SUMMARY MODAL -->
+<div id="summaryModal" class="summary-modal-overlay" onclick="closeSummary()">
+    <div class="summary-modal-box" onclick="event.stopPropagation()">
+        <div class="summary-modal-header">
+            <h2 class="section-title" style="margin:0">AI Summary</h2>
+            <button onclick="closeSummary()" class="modal-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div id="summaryModalContent" class="summary-modal-body"></div>
+    </div>
+</div>
+
+<script>
+function showSummary(text) {
+    const lines = text.split('\n').filter(l => l.trim());
+    let html = '<div class="summary-structured">';
+    lines.forEach(line => {
+        if (line.includes(':')) {
+            const idx = line.indexOf(':');
+            const key = line.substring(0, idx).trim();
+            const val = line.substring(idx + 1).trim();
+            html += `<div class="summary-row">
+                <span class="summary-key">${key}:</span>
+                <span class="summary-val">${val}</span>
+            </div>`;
+        } else {
+            html += `<div class="summary-row">
+                <span class="summary-val full">${line}</span>
+            </div>`;
+        }
+    });
+    html += '</div>';
+    document.getElementById('summaryModalContent').innerHTML = html;
+    document.getElementById('summaryModal').classList.add('active');
+}
+function closeSummary() {
+    document.getElementById('summaryModal').classList.remove('active');
+}
+</script>
+{% endblock %}

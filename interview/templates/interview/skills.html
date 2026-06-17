@@ -1,0 +1,155 @@
+{% extends 'interview/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'interview/css/skills.css' %}">
+{% endblock %}
+
+{% block nav_skills %}active{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Skills Detected</h1>
+    <p>Skills extracted from your resume</p>
+</div>
+
+<!-- STATS ROW -->
+<div class="skills-stats-row">
+    <div class="stat-card">
+        <div class="stat-label">Total Skills</div>
+        <div class="stat-value blue">{{ total_skills }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Technical Skills</div>
+        <div class="stat-value blue">{{ technical_count }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Soft Skills</div>
+        <div class="stat-value blue">{{ soft_count }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Match Score</div>
+        <div class="stat-value blue">{{ ats_score }}%</div>
+    </div>
+</div>
+
+<div class="skills-grid">
+
+    <!-- LEFT -->
+    <div class="skills-left">
+
+        <!-- Technical Skills -->
+        <div class="card">
+            <div class="skills-tab-row">
+                <button class="skills-tab active" data-tab="technical">Technical Skills</button>
+                <button class="skills-tab" data-tab="soft">Soft Skills</button>
+                <button class="skills-tab" data-tab="all">All Skills</button>
+            </div>
+
+            <div id="tab-technical" class="tab-content active">
+                <div class="skills-wrap" style="margin-top:16px;">
+                    {% for skill in technical_skills %}
+                        <span class="skill-chip">{{ skill }}</span>
+                    {% empty %}
+                        <p class="empty-state-text">No technical skills detected.</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div id="tab-soft" class="tab-content">
+                <div class="skills-wrap" style="margin-top:16px;">
+                    {% for skill in soft_skills %}
+                        <span class="skill-chip soft">{{ skill }}</span>
+                    {% empty %}
+                        <p class="empty-state-text">No soft skills detected.</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div id="tab-all" class="tab-content">
+                <div class="skills-wrap" style="margin-top:16px;">
+                    {% for skill in all_skills %}
+                        <span class="skill-chip">{{ skill }}</span>
+                    {% empty %}
+                        <p class="empty-state-text">No skills detected.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Analysis -->
+        <div class="card">
+            <h2 class="section-title">Skills Analysis</h2>
+            <div class="analysis-grid">
+                <div class="analysis-col strong">
+                    <h3 class="analysis-col-title green">Strong Skills</h3>
+                    <div class="skills-wrap">
+                        {% for skill in strong_skills %}
+                            <span class="skill-chip">{{ skill }}</span>
+                        {% empty %}
+                            <p class="empty-state-text">—</p>
+                        {% endfor %}
+                    </div>
+                    <p class="analysis-note">These are your core strengths</p>
+                </div>
+                <div class="analysis-col improve">
+                    <h3 class="analysis-col-title orange">Skills to Improve</h3>
+                    <div class="skills-wrap">
+                        {% for skill in improve_skills %}
+                            <span class="skill-chip orange">{{ skill }}</span>
+                        {% empty %}
+                            <p class="empty-state-text">—</p>
+                        {% endfor %}
+                    </div>
+                    <p class="analysis-note">Consider gaining more experience</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT: Per-skill progress -->
+    <div class="skills-right">
+        <div class="card">
+            <h2 class="section-title">Skill Proficiency</h2>
+            <div class="skill-bars">
+                {% for skill in skill_bars %}
+                <div class="skill-bar-row">
+                    <div class="skill-bar-label">{{ skill.name }}</div>
+                    <div class="skill-bar-wrap">
+                        <div class="progress-bar">
+                            <div class="progress-fill {% if skill.level >= 80 %}green{% elif skill.level >= 60 %}{% else %}orange{% endif %}"
+                                 style="width:{{ skill.level }}%"></div>
+                        </div>
+                    </div>
+                    <span class="skill-bar-pct">{{ skill.level }}%</span>
+                </div>
+                {% empty %}
+                <p class="empty-state-text">Upload a resume to see skill proficiency.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a href="{% url 'questions_page' interview_id %}" class="btn btn-primary btn-full">
+            <i class="fa-regular fa-message"></i> Generate AI Questions
+        </a>
+        <a href="{% url 'ats_score' interview_id %}" class="btn btn-secondary btn-full" style="margin-top:10px;">
+            <i class="fa-regular fa-circle-check"></i> Check ATS Score
+        </a>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.querySelectorAll('.skills-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+    });
+});
+</script>
+{% endblock %}

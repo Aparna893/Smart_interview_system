@@ -1,0 +1,2710 @@
+[
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the django command to delete all tables?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "How would you determine where each property and method of a Python class is defined?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to run a piece of Python code from within Aspera Orchestrator?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between Abstract classes and Mixins in Python django"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the default order of a list returned from a Django filter call?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the preferred way of handling imageio in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the right regex that matches one of the substrings at the end of the word in Java?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "what is django formsets used for?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the best approach for creation of object in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Java's most generic third party linked list?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a good way to test that a Java method is synchronized?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a good automated test tool to test UI of Java Swing based windows application"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way in Python to loop over a list back to front?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the difference between hive jdbc client and hive metastore java api"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the solution to this Java nested loop?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the proper way to pass a ThreadFunction to CreateThread API"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the equivalent Java configuration for an XML p-namespace attribute?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is Intern() in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between javaee-api and javaee-web-api?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the syntax for Dates in MongoDB running on MongoLab?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the recommended way to replace multiple strings in one large string in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the right and secure way to set session in java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a simple way to Cache a List (or other Collection) in Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the -J-XX meaning? appear in the java command line"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is a proper UML class-diagram for a tree node class with reference to parent and a list of descendants?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the proper way to get the value of a React <select> element?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to pass information from java to c++?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is recommended library for unit testing Playframework 2.3.7 RESTful api"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is GSList* in Java-DBus?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the size of empty class in C++,java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "explain java compile order"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "Define one-to-one in EF code first with fluent API"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "Define Custom API Responses in Installable Hook"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to post to Twitter from a django app?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is \"generator object\" in django?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the correct syntax for list comprehension in python"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the meaning of % in this python expression"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the OAuth scope for the Google Translation API?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the purpose of a context manager in python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "How would I define the entire surface of a webpage in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is an expression in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is default javac source mode (assert as identifier compilation)?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the quickest way to flip a Java boolean?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a simple way to check if two words overlap at all in Python using indices"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is self.pool.get() in python and odoo?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the correct way to remove documents from a mongodb database where the field size is too large to index?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is %timeit in python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between these 4 different types of Python shebangs on Windows?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is startup-management.xml in a Java project"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between using parenthesis and not using parenthesis in a method in Python"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the basic architecture of a node.js + mongodb app?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the order returned by openldap using python-ldap package"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Aggregate/Reduce version of this loop using Java streams?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the default value of maxResults in bigquery API call?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Define functions recursively with derivative in Python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to mock a java class alone with out JUNIT"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the equal method to opencv Mat.copyto() method in javacv?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the purpose of the commented-out sun.security.ec.SunEC provider in java-7-openjdk?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Java equivalent of this Scala code?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define/Instantiate a java object from c/c++"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is Python's default exit code?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is closer to python None: nil or NULL?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the most pythonic way to support unittest2 features across a range of Python versions?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the time taken by java to call a method in another package?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the c# equivalent of Iterator in Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the semantic difference between the Java fonts Monospaced and DialogInput?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the correct way to delete a non-leaf node in an LDAP directory"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to simulate java.lang.Thread?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the purpose of the Host: parameter in Apiary?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the pros and cons between Enum and enum-based class implementation in Java?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the best way to host node.js app on Windows?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Constant Value of the Underline font in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best encoding for buildin a multilingual java based web application, and why?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the fastest way to get data into Cassandra 2 from a Java application?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a \"Node\" in JavaFx/FXML?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is best way to use node.js and MSMQ?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the basic architecture of a node.js + mongodb app?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between Boxing and AutoBoxing in Java?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the most efficient way to transfer few props from a component to its child in ReactJS?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the purpose of the symlinks within the include and local directories in a python virtualenv?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is corresponding .net usercontrol in java?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the right way for testing redirects in django-paypal?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a thread-specific os.chdir and mkdir in python?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the cost of require() in node.js?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is meant by Real Numbers or values in java and a very elementary explanation of primitive types in java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is meant with a buffer in python"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Define global variables in one line Python"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the namespace of Google.Apis.Authentication;"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a simple fuzzy string matching algorithm in Python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to capture output from a process using python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the point of defining new class as a struct in Python C API"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the pythonic way to alternate between two functions in a loop"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the simplest way to calculate the difference of two time stamps in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the time complexity of LinkedList.getLast() in Java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the best way to secure a wpf client app calling web api services"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the API to implement for the Apache Procrun service?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is a MongoDB driver in layman's terms?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the use of a sub class object being referred by a super class variable in java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the equivalent of ni si in IDA python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the pure Python equivalent to the IPython magic function call %matplotlib inline?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is acceptable in a python try statement"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the most efficient way to handle the interpretation of commands/input in a java program?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the new generated code \"This was auto-generated to implement the App Indexing API.\"?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the diff between React.render(<div></div>, document.body) and React.render( (<div></div>), document.body)"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is equivalent methods in C# for mark and reset methods in java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is equivalent of CURLOPT_HTTPHEADER in java httpurlconnection"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the easiest/best/most correct way to iterate through the characters of a string in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Explaination of this Fancier Output Formatting code of python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define bean aliases programmatically with spring java config"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the API used to add/remove/manage users of AWS Directory Service?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is this.props (Meteor with React Tutorial)"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between these two ways of casting in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the simplest way to split two lists in Python?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "what is the right way to change label of a kubernetes node without using kubectl?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a 'good practice' way to write a Python GTK+ application?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the equivalent of a Swift completion block in Python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is minimum Servlet API version with which log4j2 will work?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is database behind google fitness api?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is db in mongodb CLI?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to use a core-java libraries (such as javax.*) that aren't in Android"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between offering a REST API and offering a \"web service\" with a basic API to retrieve and/or modify data?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is an Erlang node?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is Karken.js suit and how much it helps Node.js to be more secure and scalable?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the use of java connector architecture?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is 0xffffffff and << in java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the difference between a = x and a=x[:] in python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Java's lightest weight non-concurrent implementation of Iterable?"
+  },
+  {
+    "input": "Generate interview question for flask",
+    "target": "What is the relationship between flask, mongokit, pymongo, flask-pymongo?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to cache and reuse immutable singleton objects in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a good design pattern/structure to represent Direct Acyclic Graph in Java?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the purpose of <Node \"node\"> in write_graphite plugin of collectd?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the meaning of LocalGC/GlobalGC/SystemGC in IBM J9 JavaCore"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the use of Byte code in java"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the difference between count() and find().count() in MongoDB"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between Java Memory Analysis Tools and Memory Leak Detection Tools?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to flag a model as inappropriate/spam in Django?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the use of Method Overloading in Java when it is achieved by changing the sequence of parameters in the argument list?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the best way to have a physics thread to handle calculations in javafx"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the reason of using _defaults and lambda in python for openerp development?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the difference between \"/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/\" and \"/Library/Python/2.7/\""
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between a class and a type in Scala (and Java)?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Apex Code? Is it related to Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a good way to package gtk python applications for windows xp?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the equivalent of ado.net datatable in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is javax.xml.bind?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the string following the \"def\" on Python? (not the docstring)"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the normal behavior of Java GC and Java Heap Space usage?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the level of optimization of the java compiler?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is level of parallelism in the Java ForkJoinPool?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the dateformat of Date.toString in java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the most preferred way to wrap C code for Python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Define a route for url ending with integer in python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the style recommendation for the Java string concatenation operator \"+\"?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the right way to use django-allauth with tastypie?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the most efficient way of writing a dictionary into a csv in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the C++ equivalent of inheriting a Java collection interface (Set, Map, List etc.)? Or extending AbstractCollection?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to port a java desktop application to run in browser?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the quickest way to measure distance betwen 2 nodes in NEO4j"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between list[1] and list[1:] in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the meaning of version number of java browser plugins?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the proper terminal syntax of this python image conversion tool"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the maximum number of shards MongoDB can have?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is this syntax style called in java? Seems to be doing things inline"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the order of event handling for the spill function in Reactive-Banana?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is a good alternative to Kue that works with MongoDB instead of Redis?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the main function of application gateway in web application and the diifrencess between API and plugins"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between data structures and collections in java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the Rails way to handle different controller clients (Web, iOS API)?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the complete process of try-catch in java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the order of complexity of comparing two python lists?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the type of '()->{}' in Java 8?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is \"T...\" on Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the purpose of using python `super() `, inside `__init__ ` other than the inheritance?"
+  },
+  {
+    "input": "Generate interview question for flask",
+    "target": "What is the purpose of Flask's context stacks?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to return multiple values from django views.py to a template"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the best way to synchronize users and groups using Google Directory API"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the Win32 API LogFont.lfCharSet value for the \"Unicode\" character set?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is \"passive data structure\" in Android/Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is high performance for creating a TIF image from a background TIF and a foreground TIF in java"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the best design pattern for a node - link diagram in Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is float in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between AudioClip and Clip in java?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the difference between ObjectNode and JsonNode in Jackson?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the keyword super doing in this java method?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the purpose of the '#' in javadocs '{@link #method}'?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the equivalent of a C# Task in python"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best wysiwyg editor for django?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the recommended way of adding a status bar to a JavaFX app?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to add temporary information to a Django model? (without creating a new model)"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a Runnable (Java) counterpart in Objective-C?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the SyncState lifetime and max size in Exchange Web Services Manage API?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the fastest way to find the exact value of the factorial of a large number in python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between DependencyResolver.SetResolver and HttpConfiguration.DependecyResolver in WebAPI"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between JavaFX scripting and Using Regular java Syntax while programming JavaFX Applications"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the default python ftplib timeout on blocking operations?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the best node module for uploading pictures to Amazon S3 services?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to store integers mapped to strings so that the keys can be ranges in python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the .NET equivalent of @Deprecated in java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to remove a dictionary item by value in python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the ideal stack_size for a thread in Python that connects to a socket?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is this mach_constant_base_node"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is better java syntax: if (isSomething() == false) { or if (!isSomething()) {"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the performance impact of using Casbah as opposed to directly using MongoDb java driver?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the purpose of creating a class-level variable in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Java equilant of this C# method RSACryptoServiceProvider.ExportCspBlob()"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the correct way to encode image data in nodejs buffers?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the difference bdist bdist_wheel in python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the NodeJs equivalent to Java getBytes()"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the Python syntax for adding the reduce part of a map/reduce pair in the ViewDefinition method of couchdb?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best for develop front end of java EE application (JSF or angular js)?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the proper way I can invoke firefox from a python3 program?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is Stamped Locks in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best IDE for java android development"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between setting the path for Java in user variables and system variables?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Clojure equivalent of a \"public static final\" constant in Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Difference between inheritance and delegation in java"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "Define custom django template tag on the fly"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between these two methods? JAVA"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the Ruby/Rails equivalent of Python's urllib.quote_plus?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a good Java-based crawler for an academic project regarding building a search engine?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Run-Time Constant Pool and Method-Area in java"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is best way to compare each item in large collection to each other with condition in Mongodb?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the equivalent of '||' (concat) in Entitymanager java query?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the deal with the pony in Python community?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is Device initializer APIs android?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the proper way to convert XML to Java objects in spring integration?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the Python equivalent of Ruby's fork block?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the difference between request.cookies['name'] and request.cookies.name in Node.js + Express"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the benefit(s) of having 'else clause' for the while loop in python?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the proper procedure for upgrading a multi-node Crate cluster?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is proper way to use local settings for celerybeat in Django?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "what is the max number of nodes in rethinkdb?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the technical term for C# or Java type languages?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the difference between Abstract classes and Mixins in Python django"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is islambda function in python"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the different between MongoDB plugins for Play framework2?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a smart solution for the logging of how much time a task is completed in Java?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the write performance of Cassandra, HBase, MongoDB or Elastic Search"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a good way to format several levels' loops in Python"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the naming convention in Python for variable and function names?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is a flexible method to convert a C style API to use libdispatch with blocks"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Scala equivalent to a Java builder pattern?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define a sourceset for all java sub-projects"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best speech recognition library for Java Micro Edition?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the default chunker for NLTK toolkit in Python?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the difference between these two nodes?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between char and Character in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the correct way to wait for a client response in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is this java post increment operator doing?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the alternative to MilRelease api from MilCore.dll?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the best way to handle an API Response top level in Android using Retrofit2?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the purpose of #[message.payloadAs(java.lang.String)] in mule esb"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a process_reaper thread in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the most Pythonic way to modify the function of a function?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the alternative of ISO7816.SW_PIN_REQUIRED in JavaCard 2.2.2?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between the \"standard streams\"(system.out,system.in,system.err) and the \"Console\"(java.io.console) in java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the name of the technique of holding open a web API call until new data is available, or the request times out?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best approach for implementing enable/disable methods in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is Ruby's analogue of Python's variables, undeclared in the class definition?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is String Local Memory in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the meaning of \"&\" in java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the use of lambda in this python code?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is '$' in python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the most compatible way to install python modules on a Mac?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to check null in Java"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is body parameter in youtube data api's operations?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Explain the clone() function in java"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the default values for Django fields?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between Image.resize and Image.thumbnail in Pillow-Python"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between showFeedDialog and publishUserAction Facebook API?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the right way to manage namespaces in Python 3?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is JCR in java and spring"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the support timeline for Graph apis"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to implement global variables to whole code in java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the fastest way to send 100,000 HTTP requests in Python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the correct import statement to use for a Select object in webdriver 2.4 under python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is correct way to import java web maven project to eclipse?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "Define MongoDB Querys"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the logical xor operator in java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the simplest way for me to use Google's APIs?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the equivalent of Visual Basic Type in Android Java"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is Rage Shake api used in Facebook and Google + like application,Can i use same api in my application?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is Django on IronPython.Net Status?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "what is the control flow of django rest framework"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to run a Java program that also has Scala code?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the performance impact of using Casbah as opposed to directly using MongoDb java driver?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a pythonic of finding the indices of the first value in a multi-dimensional list that matches the value I'm looking for?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the best practice to retrieve all customers from Stripe API into one list"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to call Java code from Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Python/PyDev equivalent to org.eclipse.jdt.core.IJavaElement?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the correct way in node.js Express to show a spinner while performing a time consuming post?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to include Mercurial changeset id (or revision) in a Django template?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the difference between calling a node function (that returns a promise) directly vs using ninvoke"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is corresponding java data type of wchar_t"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between device api and native client in chrome"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the differences between Node *node[100] and Node node[100]"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the correct terminology for a specific resource underneath a REST API?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the use of ByteBuffer in Java?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the simplest way to create a NON-REST API in Django?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the difference between a node and a vertex?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the runtime complexity of python list functions?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the name for a quadtree/octree like tree with an arbitrary number of child nodes?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the best data structure to store this data on mongoDB?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the most efficient way to transfer pictures over wifi from FlashAir in Java8?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a \"function shape\" with respect to functional interfaces in Java 8?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the advantage of the 'src/main/java'' convention?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Defined function in python gets rid of variable after finish"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the canonical way to check if a function has been called in Python unittest without use of a mock?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is a \"Node\" in JavaFx/FXML?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between a stack and a heap in Java?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is Django model field choices best practices?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the difference between single thread and non-blocking I/O operation in NodeJs?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the equivalent of ruby YAML.load(object) and YAML.dump(serialized_str) in java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the main use of the Python built-in 'compile'?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best Java GUI methodology for ease of maintenance and enhancement?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the proper convention for locking in api's?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the ipython notebook \"Terminals\" menu option"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the canonical way of handling sys arguments in Python?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is exact xpath for the first childnodes of a node?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is a simple way to secure api requests between uwp and asp core"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is meant by \"escape sequence\" in the definition of Java string literals?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the Order of Network Interfaces in NodeJs"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a back-reference in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the java/scala configuration needed to integrate Atmosphere (version 1.0.13)?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best app for row level permissions in Django?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the most popular MMO game that has an out-of-game API"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a Java String's default initial value?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define dynamic separator for Properties.load in java"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is a good third party transaction API platform to use for ROR?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the admin url in a Django template (and where is a list of all system urls)?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "what is the difference between ga:visitors & ga:visits in GA API?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the best way to implement the functionalities of BitmapImage without inheriting?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Define a long list of variables in python"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the practical difference between these two ways of making web connections in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is an efficient row-column (ResultSet like) data structure for Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between a built-in font and a third-party font to Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is this expression in Java ( 1 << 2)?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is this Python Icon?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "what is the best way to get post data in nodejs not express?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the latest version for MonoDevelop that support mono 2.10.11 in Mac?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the REST (or CLI) API for logging in to Amazon Cognito user pools"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "what is SurfaceView SurfaceHolder Surface Camera API android"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the TypeScript 2.0 / ES2015 way to import assert from Node.js?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between a module and a script in Python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the preferred way to import pylab at a function level in Python 2.7?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is mean by setRequestedFps in CameraSource Google Mobile vision API"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is System.Reactive.Linq.Observ\u00ce\u00b1ble? (note the alpha)"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to execute sandboxed Java code?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Java EE framework for web services?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the coolest (advanced/efficient) way to remove items from list in Java for Android?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the difference betwen value and defaultValue in react.js"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is \"rfcTextOfMessage\" value? : Google Apps Email Migration API Developer's Guide"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the content field for in Django admin for Flatpages?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the simplest way to get from MIDI to real audio coming out my speakers (sound synthesis) in Python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the idiomatic way to load an entire project into the iPython interpreter?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is Django on IronPython.Net Status?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is meant by methodName(Params... params) in Java"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "Define Self as multiple attributes in Django"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is meant by \"Don't abuse Android-level APIs such as heavily relying on Intent for your app's internal workings.\"?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference when I use gridapi in the controller in following way?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is an elegant way to drive same APIs on different stacks in C#"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the most appropriate way to pass objects between modules in python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the legality of scraping youtube data?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the expected date format for the mailchimp export API?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "what is replacement of com.sun.javafx.runtime API in javafx 2.1?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is object field initialization and constructor order in Java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between b'' and '' in python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is/are the Python equivalent(s) to the Java Collections Framework?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to serve a user generated graph on a website using django"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between <T> and <T extends Object> in java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the C Equivalent of Python's pack(\"<I\", 0)"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best practice to use udp data stream inside a Django project. And what about the data storage"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the use case for \"pass\" in Python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is sympy version of math.modf in python's built-in module?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the purpose of Java JDK to Eclipse?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the internal operation of getId in Java - Multithreading?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to serialize a ModelForm object in Django?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the most Pythonic way to index collection data"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to test a list contain another list (w/o gap) in python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the use of static fields PI_ENABLE_OUTPUT_ESCAPING & PI_DISABLE_OUTPUT_ESCAPING and how can we use them?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is LLVM and How is replacing Python VM with LLVM increasing speeds 5x?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Java written in?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best approach to write Java code to simulate discrete time and tasks being done?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best python editor?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Max and Min size of Applet in java card"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the security impact of deserializing untrusted data in Java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "what is the best programming language in working around Google Map API's?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "what is the difference between hive jdbc client and hive metastore java api"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the technical name of the syntactic feature \"long foo = 12L;\" style casting of harded-coded values in Java?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is a good Django app for scheduled reminders send to users by email"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is 'type' in Python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the equivalent ASP.NET Web API Message handler for the ASP.NET MVC pipeline?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the meaning of / in the help function in python 3.5.1"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the API for basic tier VM in azure?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best design pattern for a node - link diagram in Java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is difference between an abstract method and abstract property in python?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the easiest way to add rendered content to the JSON response in Django-REST-Framework?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a good thesaurus and taxonomy library for Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the meaning of \"Java is portable\"?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is **xyz meaning in python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the purpose of Finalization in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Java equivalent of C++ deque?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to try and understand a large Java Swing code base."
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best approach in python: multiple OR or IN in if statement?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the difference between various methods of creating a User object in django?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a way to convert text to a string in Python 3.3.0"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the easiest way to generate an efficient implementation of a Java interface at runtime?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the role of django REST framework if I want to integrate angularjs with django?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the Waterline translation of 'collection' type with mongodb adapter?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the proper method to Embed a Java Applet in an EXT-Gwt Container?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the advantage of using scala pattern matching instead of java switch case?"
+  },
+  {
+    "input": "Generate interview question for machine learning",
+    "target": "What is the best measure for ACCURACY in MACHINE LEARNING"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between Shell, Kernel and API"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the best way to iterate a list and exit in java"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is a data structure called where a node can assosiate to many other nodes?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to do a static dispatch, bytecode generated proxy in java nowadays?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is :scm_verbose on capistrano?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the fastest way to replace all appearances of ... in strings by space? Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Implementing user defined Native locale in Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define a relative path of image in Java FX"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the attribute \"done\" in NodeJS?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the node-way to talk about require, import, and packages?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define constructor in Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Java equivalent for C# `Interlocked.Exchange(Object, Object) : Object`?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the fastest cache for small and rarely changing data to use with Django?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the proper way of replacing a nested for loop with streams in Java 8?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "Define small named packages in your node application without having to publish them to npm"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the ID of the Starred contacts group in the google contacts api"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is dispatcherIndex used for in React TODO example"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is overloading in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to use JavaDoc to document a Java enum?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Reflection in Java Can anyone explane?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to clean up an Object in Java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the best way to update a model object through a model-controller (API wrapper) only"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is Entity Framework fluent api?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is a fast/scalable way to write a RESTful API today?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the typical convention for importing Java packages?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "what is the best structure of a shop & product like database in mongodb?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the idiomatic ReactJS way to deal with ?initial? state?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the history behind the Java-Matlab interface?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is called defer-node-expansion in XML?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is <?> in java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Define or change command prompt with variable in Python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Explain Ruby loops compared to Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the recommended way to access Service Layer by client code in Java web application?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is return type of db.collection.find() in mongodb"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the meaning of calling u'\\1234'.decode('utf-8') in Python 2.7x?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the correct use of Java interfaces with modulisation?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the simplest way in Java to extend a class and provide a copy constructor if the base class does not have one?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is reason that on mapreduce sometimes the mapper generates more documents than the original data in mongodb?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is \"empty\" expression in django rest_framework.serializers.BaseSerializer"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is cacheTime in the sitemap node.js module?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a good way to do countif in Python"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is more required to work with your Big commerce API except cUrl?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best IRC network for Java (#java)?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to chain and filter DB queries in django?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Java EE?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the complexity of this python sort method?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the recommended way to handle node.js private module dependencies?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Explain third party static lock behaviour used in synchronization in java"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the easy way to create django form"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to add an API to a Django application?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the best way to use a reagent component in react js?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Define context variables in behave python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is missing from the java bindings of OpenCV?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a suitable buffer for Python's struct module"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the effect of static final transient in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is best method to change settings for python unit tests during run time?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the react-router 1.0 equivalent of 0.13's \"getCurrentRoutes\"?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is class refers to in python gae?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the correct syntax for launching ipython qtconsole/notebook for python version=x"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "what is the explicit version of node()"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a Pythonic way to count dictionary values in list of dictionaries"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the Objective-C equivalent of the Java Math library?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best library for Java to grid/cluster-enable your application?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between FB.api and FB.Data.query"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the double inequality (>>) sign in python?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "what is function_foo.boolean = True in django's model?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the usual method for unattended installation of Python packages with platform-specific extensions in Windows?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the best way to handle large blocks of text in NodeJS?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the correct code for grabbing these API results converted to JSON from XML?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between Asp.Net Web API and WCF Service?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is a Windows API?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the simplest library for consuming wordpress xmlrpc API"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the max level of inheritance in java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the current support for the W3C Geolocation API?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between javax.persistence.metamodel.Map and java.util.Map?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define Java for wsimport"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the purpose of having a class inside a constructor? Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is System, out, println in System.out.println() in Java"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the simplest way to lock an object in Django"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is HTTP Parameter Pollution attack in NodeJS/ExpressJs"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is outData.writeInt() does in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is Daemon thread in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the equivalent of unsigned long in java"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "what is the query for to get individual data in collection in mongodb?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best JavaEE framework for web application coding?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the value of a function object in python 2.x?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the meaning of the object in the python classes"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the expression language being used in log4.xml for accessing java system properties?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is a good django library for logging in users with Twitter, Facebook or an OpenID provider?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the Python equivalent of Ruby's \"inspect\"?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the best way to bulk update for 500 documents in mongodb using java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the cross-platform method of enumerating serial ports in Python (including virtual ports)?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the best way to call children method from parent in reactjs?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the practicality of placing non-formatting elements inside javadoc?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is consuming memory in my Node JS application?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the replacement for dateutil.parser in python3?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is (functional) reactive programming?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is Python android scripting limitations?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between Ruby and Python versions of\"self\"?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the naming convention for Python class references"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the proper way to get a char input(using Scanner) inside a loop in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define java CLASSPATH"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is happening in this Python code to get the terminal window size?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is Node.js' Connect, Express and \"middleware\"?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the suitable way to close the database connection in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the maintained version of google-app-engine mapreduce for python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to call Java code from Python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to sort list with custom sorting parameters in Python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is returned when passing null to CreateCompatibleDC() in winapi"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is number of Query Google API per day for Unity"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is +new Date syntax in node.js"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the best way to model a heterogenous many-to-many relationship in Django?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the feasibility of porting a legacy C program to Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a java class's correct main method argument structure"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is a more efficient way in Python to return list elements which are not in a second list?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way get the symmetric difference between two sets in java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the correct callback signature for a function called using ctypes in python?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the correct way to have a method return a dummy promise with Bluebird in node.js"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the point of defining new class as a struct in Python C API"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is a way to ask in python if a number actually exists and is not masked in python"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the name for the Maya Python library(ies)?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the future of ASP.NET MVC framework after releasing the asp.net Web API"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the fastest way to do I/O in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a reasonable order of Java modifiers (abstract, final, public, static, etc.)?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is the name of that in python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define variable in gradle application, read it in java"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the differences between GoogleSignInApi.signOut and FirebaseAuth.signOut and more"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to show Map in java"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the right way to make REST token with together with Django session?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the effective method to handle word contractions using Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between using __init__ and using a function- Python"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the relationship between django cms and custom plugin models?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to expose a WCF service so that it can be easily consumed from Java/CXF?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is the proper pattern for nested schemas in Mongoose/MongoDB?"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is MongoDB size limit on Openshift?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is \"Mounting\" in React js?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the pythonic way to detect the last element in a python 'for' loop?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the oldest time that can be represented in python?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the difference between Reactive programming and plain old closures?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the quickest way to detect an unreachable host in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the difference between typecasting and typeconversion in c++ or java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the downside of scanning with regular expressions in Java"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is react JS reusable components?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the purpose of Python's property.getter?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the best way to query Cassandra data from Node.JS including JOIN's, Full text search?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the reason behind the code being unreachable after the for loop and how can i resolve this in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best UI Java markup language for designing applications for Google Android?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to save the comments collected from Facebook using Python?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the correct way to use node dependent paths in Netbeans?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the proper way to parse a Lucene Query in python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the accepted way to handle unsigned data in java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is causing the variance in the execution time of this python script?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is axis in Python with Numpy module?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a good way to implement choose notation in Java?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is a smart way to import articles from a RSS feed to my web app in Node?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the equivelent of the synchronize block in Java, in C# ASP.NET?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best Java-based Mailing List application allowing opt-in/opt-out"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the standard way to add N seconds to datetime.time in Python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the point of float('Inf') in Python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the rate limit for direct use of the Google Analytics Measurement Protocol API?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the runtime complexity of Python's deepcopy()?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between a Groovy object and a Java object with regards to functionality in Groovy code?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the functionality of selectingApplet() method in JAVACARD2.2"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "define a regular expression in python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is \" Stub \" and \"AIDL\" for in java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "Define relative path in java eclipse?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between != and =! in Java?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the best NodeJs library for Multichain?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is put dyal methods of removing what they need? I can not just for my API just make and receive method of post ??? What are they for?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the purpose of Java's unary plus operator?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the DOM Node Count in google chrome's developer tools timeline memory view?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between API & Framework"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the React way to the 'Single Item'?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between javaee-api and javaee-web-api?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is different b/w @api.one, @api.multi and @api.model?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the end of string notation in python"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the memory consumption of an object in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the alternative to an enterprise portal strategy in the Java space?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is enumerate in Python mean?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the correct way to format long lines of code in python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between the JAVA_HOME environment variable and the output of \"java -version\""
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the django way of doing a subselect?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the difference between the Box API and OneCloud APIs and is the iPhone sdk OneCloud only?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to do java coding for these type of byte level operations?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the pythonic way to calculate argmax?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the common hook up point for a proper Dependency Injection with MVC5 and WebApi2 controllers?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the correct syntax of GdkPixbuf.Pixbuf.savev() when used in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is this type of method overriding called in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a random seed in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the proper way to print a nested list with the highest value in Python"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the <caching> node in the web.config?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What Is Scope In Java"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is a good name for an instance method that adds a linked-list node after the target?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is this python function looking for?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the best practice for using redis in nodejs?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is #Number in Java bytecode?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is more efficient in importing in Java?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the canonical way to find out if a Django model is saved to db?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the pythonic way to implement sequential try-excepts?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the simplest way to create a NON-REST API in Django?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the difference between `| `and` || `in java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to convert a zope DateTime object into Python datetime object?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the proper way to implement a REST API for Search by multiple criteria?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the proper way to use a Logger in a Serializable Java class?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is optimal way to pipe one stream to two streams in node.js"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is better place for loading data from API- viewDidLoad, viewWillAppear or viewDidAppear?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the most pythonic way to extract branch names from a remote-ls list?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is MQ and how is it used in an OpenStack deployment and Java EE applications?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the purpose of java.awt.Color.blue and java.awt.Color.BLUE"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the simplest way to find the difference between 2 times in python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the equivalent of word boundary meta-character in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the basis of output order Hashset in Java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the difference between \"Start-Process python ex.py\" and \"python ex.py\" in powershell?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the correct way to deal with DB migration while using South, Django and Git?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the rule in Java for 'pass by reference' / 'pass by value' for variable assignment?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "what is the best way to code continuous X and Y movement of a sprite node in swift"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the correct way to slice a unicode string in python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is O(n) for java.util.Random.next(n)"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is the difference between Django and Django CMS?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the most common usage of enums in Java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the better way of authentication for REST API in Azure"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the equivalent of Rust's Option::iter in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the use of toString() in java"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the pythonic way to calculate dot product?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the best way to automate REST api"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is and isn't automatically thread-local in Python Threading?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between x++ and ++x in Java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between (p!=q ) and !(p==q) in java"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is difference between the Google Maps API project and credentials (key)?"
+  },
+  {
+    "input": "Generate interview question for react",
+    "target": "What is the best implememtation of react shouldComponentUpdate with immutable.js"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a good use case of Java Beans?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the exact use of classes in java.util.concurrent.atomic package in Java?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is different between manually processing images vs App Engine Images API"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the standard method for generating a nonce in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the SIGNIFICANCE OF additional byte to char type in JAVA?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Define the order of scenarios (or required scenario) with behave (python)"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is this Java method being called on?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "what is the best way to approach where next is depending on last step in django?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is a len function in Python, and how would you use it?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the relation between the dog and animal classes in this Python code?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Define imports and Python project structure to allow running locally and when installed"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the best way to add iOS Google API components (Analytics) to a static iOS library?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is a good alternative of LTRIM and RTRIM in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "Explain time and space complexity of two python codes. Which one is the best? (Non- subjective)"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the win32 API function for private bytes?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the call limit to Magento 2 Rest APIs? (Burst size and Leak Rate)"
+  },
+  {
+    "input": "Generate interview question for mongodb",
+    "target": "What is an upsert in the context of mongodb"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the Matlab equivalent of the yield keyword in Python?"
+  },
+  {
+    "input": "Generate interview question for api",
+    "target": "What is the proper way to list all youtube broadcasts on behalf of the Content Owner (Youtube Partner) using Youtube API V3?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "what is the means of i &=(i-1) in java"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the difference between public int and int in Java?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the best way to get duration of a GIF in Java Android?"
+  },
+  {
+    "input": "Generate interview question for django",
+    "target": "What is instance= in Django?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the init function of a dynamic module in python?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best way to break up this string in Python?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the NodeJs equivalent to Java getBytes()"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is asymptotic complexity for CRUD operations on basic Java containers"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is installing Python modules or packages?"
+  },
+  {
+    "input": "Generate interview question for node",
+    "target": "What is the fastest way to complete a list of tasks with node.js async?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is internal representation of string in Python 3.x"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the pythonic way of extracting (& removing) a slice from a list? Or... What is the \"inverse\" of the slice+=list operator - python"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the __dict__.__dict__ attribute of a Python class?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "What is the best stemming method in Python?"
+  },
+  {
+    "input": "Generate interview question for java",
+    "target": "What is the situation in 2013 with @notnull annotations in Java?"
+  },
+  {
+    "input": "Generate interview question for python",
+    "target": "what is \"foo\" used for in \"def function(foo):\" when using Python3.x"
+  }
+]

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment files
+.env
+
+# Uploads
+uploads/
+
+# Temporary files
+*.log
+*.sqlite3
+*.db
+lmqg_env/
+media/
+models/
+
+data/kaggle/Answers.csv
+data/kaggle/Questions.csv
+data/kaggle/Tags.csv

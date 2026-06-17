@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview System</title>
+    <link rel="stylesheet" href="{% static 'interview/css/base.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <i class="fa-solid fa-brain"></i>
+            <span>AI Interview System</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="{% url 'dashboard' %}" class="nav-item {% block nav_dashboard %}{% endblock %}">
+                <i class="fa-solid fa-gauge-high"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="{% if interview_id %}{% url 'resume_analysis' interview_id %}{% else %}#{% endif %}"
+               class="nav-item {% block nav_resume %}{% endblock %}">
+                <i class="fa-regular fa-file-lines"></i>
+                <span>Resume Analysis</span>
+            </a>
+            <a href="{% if interview_id %}{% url 'ats_score' interview_id %}{% else %}#{% endif %}"
+               class="nav-item {% block nav_ats %}{% endblock %}">
+                <i class="fa-regular fa-circle-check"></i>
+                <span>ATS Score</span>
+            </a>
+            <a href="{% if interview_id %}{% url 'skills_page' interview_id %}{% else %}#{% endif %}"
+               class="nav-item {% block nav_skills %}{% endblock %}">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Skills</span>
+            </a>
+            <a href="{% if interview_id %}{% url 'questions_page' interview_id %}{% else %}#{% endif %}"
+               class="nav-item {% block nav_questions %}{% endblock %}">
+                <i class="fa-regular fa-message"></i>
+                <span>AI Questions</span>
+            </a>
+            <a href="{% url 'history' %}" class="nav-item {% block nav_history %}{% endblock %}">
+                <i class="fa-regular fa-clock"></i>
+                <span>History</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+</div>
+
+{% block extra_js %}{% endblock %}
+</body>
+</html>

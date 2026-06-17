@@ -1,0 +1,171 @@
+.rv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.rv-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    align-items: start;
+}
+
+.rv-left, .rv-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CANDIDATE DETAILS */
+.rv-detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.rv-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+.rv-detail-item:last-child { border-bottom: none; }
+.rv-detail-label {
+    width: 80px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+}
+.rv-detail-value {
+    font-size: 14px;
+    color: var(--gray-800);
+    font-weight: 500;
+}
+
+/* QUESTION CARDS */
+.rv-question-card { border-left: 3px solid var(--blue); }
+
+.rv-q-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+.rv-q-number {
+    background: var(--blue);
+    color: var(--white);
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.rv-q-score {
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: var(--radius-md);
+}
+.rv-q-score.excellent { color: var(--green);  background: var(--green-light); }
+.rv-q-score.good      { color: var(--blue);   background: var(--blue-light); }
+.rv-q-score.average   { color: var(--orange); background: var(--orange-light); }
+.rv-q-score.poor      { color: var(--red);    background: var(--red-light); }
+
+.rv-q-section { margin-bottom: 14px; }
+.rv-q-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-400);
+    margin-bottom: 6px;
+}
+.rv-q-text {
+    font-size: 14px;
+    color: var(--gray-700);
+    line-height: 1.6;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+}
+.rv-q-text.question  { background: var(--gray-50); }
+.rv-q-text.expected  { background: #f0fdf4; color: #166534; }
+.rv-q-text.candidate { background: var(--blue-light); color: #1e3a8a; }
+
+.rv-verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+.rv-verdict.excellent { background: var(--green-light);  color: var(--green); }
+.rv-verdict.good      { background: var(--blue-light);   color: var(--blue); }
+.rv-verdict.average   { background: var(--orange-light); color: var(--orange); }
+.rv-verdict.poor      { background: var(--red-light);    color: var(--red); }
+
+/* EMPTY */
+.rv-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 40px;
+    color: var(--gray-400);
+    text-align: center;
+}
+.rv-empty i { font-size: 36px; }
+
+/* SCORE CARD */
+.rv-score-card { text-align: center; }
+.rv-big-score {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 12px 0 8px;
+}
+.rv-big-score.excellent { color: var(--green); }
+.rv-big-score.good      { color: var(--blue); }
+.rv-big-score.average   { color: var(--orange); }
+.rv-big-score.poor      { color: var(--red); }
+
+/* SKILL AVERAGES */
+.skill-avg-list { display: flex; flex-direction: column; gap: 14px; }
+.skill-avg-row  { display: flex; align-items: center; gap: 10px; }
+.skill-avg-name {
+    width: 90px; font-size: 12px; color: var(--gray-600);
+    flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.skill-avg-bar-wrap { flex: 1; }
+.skill-avg-pct {
+    width: 34px; text-align: right;
+    font-size: 12px; font-weight: 600; color: var(--gray-600);
+}
+
+/* SUMMARY */
+.rv-summary-list { display: flex; flex-direction: column; gap: 0; }
+.rv-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+.rv-summary-row:last-child { border-bottom: none; }
+.rv-summary-label { font-size: 13px; color: var(--gray-500); }
+.rv-summary-value { font-size: 13px; font-weight: 600; color: var(--gray-800); }
+
+@media (max-width: 1000px) {
+    .rv-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,118 @@
+.ats-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    align-items: start;
+}
+.ats-left, .ats-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* SCORE CIRCLE */
+.score-circle-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 12px;
+}
+.score-desc {
+    font-size: 13px;
+    color: var(--gray-500);
+    text-align: center;
+}
+
+/* BREAKDOWN */
+.breakdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+}
+.breakdown-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.breakdown-label {
+    width: 140px;
+    font-size: 13px;
+    color: var(--gray-600);
+    flex-shrink: 0;
+}
+.breakdown-bar-wrap { flex: 1; }
+.breakdown-pct {
+    width: 38px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+/* DETAIL BREAKDOWN */
+.detail-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.db-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+.db-item:last-child { border-bottom: none; }
+.db-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.db-dot.green  { background: var(--green); }
+.db-dot.blue   { background: var(--blue); }
+.db-dot.orange { background: var(--orange); }
+.db-dot.red    { background: var(--red); }
+
+.db-info { flex: 1; }
+.db-info strong { display: block; font-size: 13px; color: var(--gray-800); font-weight: 600; }
+.db-info span   { font-size: 12px; color: var(--gray-500); }
+.db-score { font-size: 13px; font-weight: 700; color: var(--gray-700); }
+
+/* RECOMMENDATIONS */
+.reco-list { display: flex; flex-direction: column; gap: 12px; }
+.reco-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; color: var(--gray-700);
+}
+.reco-icon { font-size: 13px; }
+.reco-icon.green { color: var(--green); }
+.reco-icon.blue  { color: var(--blue); }
+
+/* ATS SUMMARY CARD */
+.ats-summary-card { text-align: center; padding: 28px 24px; }
+.ats-summary-score {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+.ats-summary-score.green  { color: var(--green); }
+.ats-summary-score.orange { color: var(--orange); }
+.ats-summary-score.red    { color: var(--red); }
+.ats-summary-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-bottom: 10px;
+}
+.ats-summary-desc {
+    font-size: 13px;
+    color: var(--gray-500);
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .ats-grid { grid-template-columns: 1fr; }
+}

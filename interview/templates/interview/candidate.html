@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Interview — AI Interview System</title>
+    <link rel="stylesheet" href="{% static 'interview/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'interview/css/candidate.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="candidate-body">
+
+<div class="candidate-layout">
+
+    <!-- HEADER -->
+    <header class="candidate-header">
+        <div class="cand-header-logo">
+            <i class="fa-solid fa-brain"></i>
+            <span>AI Interview System</span>
+        </div>
+        <div class="cand-header-center">
+            <span class="cand-header-title">AI Interview Examination</span>
+        </div>
+        <div class="cand-header-right">
+            {% if has_questions %}
+            <span class="badge badge-green">
+                <i class="fa-solid fa-circle" style="font-size:8px;"></i> Live
+            </span>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="candidate-main">
+
+        <!-- LEFT: Video -->
+        <div class="candidate-left">
+            <div class="card video-card">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-video" style="color:var(--blue)"></i>
+                    Camera Feed
+                </h2>
+                <div class="video-wrap">
+                    <video id="candidateVideo" autoplay muted playsinline></video>
+                    <div class="video-overlay" id="videoOverlay">
+                        <i class="fa-solid fa-video-slash"></i>
+                        <span>Camera starting...</span>
+                    </div>
+                </div>
+                <div class="recording-indicator" id="recordingIndicator">
+                    <span class="rec-dot"></span>
+                    <span>Recording</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Questions -->
+        <div class="candidate-right">
+            <div class="card question-panel">
+                {% if has_questions %}
+                    <div id="question-container"></div>
+                {% else %}
+                    <div class="empty-questions">
+                        <i class="fa-regular fa-message"></i>
+                        <p>No interview questions found.</p>
+                        <span>Please contact the interviewer.</span>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Django → JS variables -->
+<script>
+    const questions   = JSON.parse('{{ question_audio|escapejs }}');
+    let currentQuestion = 0;
+    let answers         = [];
+    let recognition     = null;
+    const csrfToken     = '{{ csrf_token }}';
+    const interviewId   = '{{ interview.interview_id }}';
+</script>
+<script src="{% static 'interview/js/candidate.js' %}"></script>
+</body>
+</html>

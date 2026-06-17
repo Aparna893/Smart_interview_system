@@ -1,0 +1,265 @@
+{% extends 'interview/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'interview/css/home.css' %}">
+{% endblock %}
+
+{% block nav_dashboard %}active{% endblock %}
+
+{% block content %}
+<div class="home-header">
+    <div>
+        <h1>Welcome! </h1>
+        <p>Let's build dream career together.</p>
+    </div>
+</div>
+
+<div class="home-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="home-left">
+
+        <!-- UPLOAD CARD -->
+        <div class="card upload-card">
+            <h2 class="section-title">Upload Resume</h2>
+            <p class="upload-sub">Upload candidate resume for AI analysis</p>
+            <form method="POST" enctype="multipart/form-data" id="uploadForm">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="form-label">Resume File</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" name="resume" id="resumeFile" accept=".pdf" required class="file-input-hidden">
+                        <div class="file-input-display" onclick="document.getElementById('resumeFile').click()">
+                            <i class="fa-solid fa-paperclip"></i>
+                            <span id="fileLabel">Choose file</span>
+                            <span class="file-hint">No file chosen</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Number of Questions</label>
+                    <input type="number" name="question_count" value="10" min="1" max="20" class="form-input">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="analyzeBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Analyze Resume
+                </button>
+            </form>
+        </div>
+
+        <!-- UPLOADED RESUME -->
+        {% if resume_pdf %}
+        <div class="card">
+            <h2 class="section-title">Uploaded Resume</h2>
+            <div class="resume-row">
+                <div class="resume-icon"><i class="fa-regular fa-file-pdf"></i></div>
+                <div class="resume-info">
+                    <strong>Resume Uploaded</strong>
+                    <span>AI Resume Analysis Active</span>
+                </div>
+                <span class="badge badge-green">Active</span>
+            </div>
+            <div class="pdf-embed-wrap" style="margin-top:14px;">
+                    <iframe
+                        src="{{ resume_pdf }}"
+                        class="pdf-embed"
+                        title="Resume Preview">
+                    </iframe>
+                        <!-- <div class="pdf-fallback">
+                            <i class="fa-regular fa-file-pdf"></i>
+                            <p>PDF preview not supported in this browser.</p>
+                            <a href="{{ resume_pdf }}" target="_blank" class="btn btn-primary btn-sm">
+                                Open PDF
+                            </a>
+                        </div> -->
+                    <a href="{{ resume_pdf }}" target="_blank" class="btn btn-secondary btn-full pdf-open-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full Screen
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        
+        <!-- RECENT ACTIVITY -->
+        <div class="card">
+            <h2 class="section-title">Recent Activity</h2>
+            {% if interview_id %}
+            <div class="activity-list">
+                <div class="activity-item">
+                    <span class="activity-dot green"></span>
+                    <span class="activity-text">Resume analyzed successfully</span>
+                    <span class="activity-time">just now</span>
+                </div>
+                {% if generated_questions_count %}
+                <div class="activity-item">
+                    <span class="activity-dot blue"></span>
+                    <span class="activity-text">AI questions generated</span>
+                    <span class="activity-time">just now</span>
+                </div>
+                {% endif %}
+            </div>
+            {% else %}
+            <p class="empty-state-text">No recent activity. Upload a resume to get started.</p>
+            {% endif %}
+            {% if interview_id %}
+            <a href="{% url 'history' %}" class="view-all-link">View All Activity →</a>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="home-right">
+
+        <!-- STATS GRID -->
+        <div class="stats-grid-home">
+            <div class="stat-card">
+                <div class="stat-icon-row">
+                    <span class="stat-label">ATS Score</span>
+                    <i class="fa-solid fa-chart-line stat-icon green"></i>
+                </div>
+                <div class="stat-value green">{{ ats_score|default:"—" }}{% if ats_score %}%{% endif %}</div>
+                <div class="stat-sub">Good Match</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon-row">
+                    <span class="stat-label">Skills Found</span>
+                    <i class="fa-solid fa-layer-group stat-icon blue"></i>
+                </div>
+                <div class="stat-value blue">{{ skills_count|default:"—" }}</div>
+                <div class="stat-sub">Technical Skills</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon-row">
+                    <span class="stat-label">Questions Generated</span>
+                    <i class="fa-solid fa-circle-nodes stat-icon purple"></i>
+                </div>
+                <div class="stat-value purple">{{ generated_questions_count|default:"—" }}</div>
+                <div class="stat-sub">AI Questions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon-row">
+                    <span class="stat-label">Resume Status</span>
+                    <i class="fa-solid fa-circle-check stat-icon green"></i>
+                </div>
+                <div class="stat-value green" style="font-size:18px;">
+                    {% if interview_id %}Analyzed{% else %}Pending{% endif %}
+                </div>
+                <div class="stat-sub">
+                    {% if interview_id %}Resume processed{% else %}Upload to analyze{% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP SKILLS -->
+        {% if skills %}
+        <div class="card">
+            <h2 class="section-title">Top Skills Detected</h2>
+            <div class="skills-wrap">
+                {% for skill in skills %}
+                    <span class="skill-chip">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- QUICK ACTIONS -->
+        <div class="card">
+            <h2 class="section-title">Quick Actions</h2>
+            <div class="quick-actions">
+                {% if interview_id %}
+                <a href="{% url 'generate_questions_ajax' %}" id="generateQuestionsAction"
+                   class="quick-action-item" data-interview-id="{{ interview_id }}">
+                    <div class="qa-icon blue"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div>
+                        <strong>Generate AI Questions</strong>
+                        <span>Generate questions based on your resume</span>
+                    </div>
+                </a>
+                <a href="{% url 'questions_page' interview_id %}" class="quick-action-item">
+                    <div class="qa-icon green"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <strong>View Questions</strong>
+                        <span>Review and finalize interview questions</span>
+                    </div>
+                </a>
+                <a href="{% url 'resume_analysis' interview_id %}" class="quick-action-item">
+                    <div class="qa-icon orange"><i class="fa-solid fa-file-lines"></i></div>
+                    <div>
+                        <strong>Resume Analysis</strong>
+                        <span>View detailed resume breakdown</span>
+                    </div>
+                </a>
+                {% endif %}
+                {% if interview_id %}
+                <a href="{% url 'download_report' interview_id %}" class="quick-action-item">
+                    <div class="qa-icon green"><i class="fa-solid fa-file-arrow-down"></i></div>
+                    <div>
+                        <strong>Download Report</strong>
+                        <span>Download resume summary as PDF</span>
+                    </div>
+                </a>
+                {% endif %}
+                <a href="{% url 'history' %}" class="quick-action-item">
+                    <div class="qa-icon gray"><i class="fa-regular fa-clock"></i></div>
+                    <div>
+                        <strong>View History</strong>
+                        <span>Your interview practice history</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% if error %}
+<div class="alert-error">
+    <i class="fa-solid fa-triangle-exclamation"></i> {{ error }}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('resumeFile').addEventListener('change', function() {
+    const name = this.files[0] ? this.files[0].name : 'No file chosen';
+    document.getElementById('fileLabel').textContent = name;
+    document.querySelector('.file-hint').textContent = '';
+});
+
+document.getElementById('uploadForm').addEventListener('submit', function() {
+    const btn = document.getElementById('analyzeBtn');
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Analyzing...';
+    btn.disabled = true;
+});
+
+// Quick action: Generate AI Questions
+const genAction = document.getElementById('generateQuestionsAction');
+if (genAction) {
+    genAction.addEventListener('click', async function(e) {
+        e.preventDefault();
+        const interviewId = this.dataset.interviewId;
+        this.innerHTML = `<div class="qa-icon blue"><i class="fa-solid fa-spinner fa-spin"></i></div><div><strong>Generating...</strong><span>Please wait</span></div>`;
+        try {
+            const resp = await fetch('/generate_questions_ajax/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ interview_id: interviewId, max_questions: 10 })
+            });
+            const data = await resp.json();
+            if (data.status === 'success') {
+                window.location.href = `/questions/${interviewId}/`;
+            } else {
+                alert('Error: ' + (data.message || 'Unknown error'));
+            }
+        } catch(err) {
+            alert('Failed to generate questions');
+        }
+    });
+}
+</script>
+{% endblock %}

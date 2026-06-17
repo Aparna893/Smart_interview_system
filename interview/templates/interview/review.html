@@ -1,0 +1,183 @@
+{% extends 'interview/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'interview/css/review.css' %}">
+{% endblock %}
+
+{% block nav_history %}active{% endblock %}
+
+{% block content %}
+<div class="page-header rv-header">
+    <div>
+        <h1>Candidate Interview Review</h1>
+        <p>Detailed performance breakdown for this session</p>
+    </div>
+    <a href="{% url 'history' %}" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left"></i> Back to History
+    </a>
+</div>
+
+<div class="rv-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="rv-left">
+
+        <!-- Candidate Details -->
+        <div class="card">
+            <h2 class="section-title">Candidate Details</h2>
+            <div class="rv-detail-row">
+                <div class="rv-detail-item">
+                    <span class="rv-detail-label">Name</span>
+                    <span class="rv-detail-value">{{ interview.name|default:"—" }}</span>
+                </div>
+                <div class="rv-detail-item">
+                    <span class="rv-detail-label">Email</span>
+                    <span class="rv-detail-value">{{ interview.email|default:"—" }}</span>
+                </div>
+                <div class="rv-detail-item">
+                    <span class="rv-detail-label">Status</span>
+                    <span class="badge {% if interview.status == 'completed' %}badge-green{% else %}badge-orange{% endif %}">
+                        {{ interview.status|capfirst }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q&A Cards -->
+        {% for q in interview.evaluated_questions %}
+        <div class="card rv-question-card">
+            <div class="rv-q-header">
+                <span class="rv-q-number">Q{{ forloop.counter }}</span>
+                <span class="badge badge-blue">{{ q.skill|default:"General" }}</span>
+                <div class="rv-q-score
+                    {% if q.score >= 80 %}excellent
+                    {% elif q.score >= 60 %}good
+                    {% elif q.score >= 40 %}average
+                    {% else %}poor{% endif %}">
+                    {{ q.score }}%
+                </div>
+            </div>
+
+            <div class="rv-q-section">
+                <span class="rv-q-label">Question</span>
+                <p class="rv-q-text question">{{ q.question }}</p>
+            </div>
+
+            <div class="rv-q-section">
+                <span class="rv-q-label">Expected Answer</span>
+                <p class="rv-q-text expected">{{ q.expected_answer }}</p>
+            </div>
+
+            <div class="rv-q-section">
+                <span class="rv-q-label">Candidate Answer</span>
+                <p class="rv-q-text candidate">
+                    {% if q.candidate_answer %}
+                        {{ q.candidate_answer }}
+                    {% else %}
+                        <span style="color:var(--gray-400);font-style:italic;">No answer provided</span>
+                    {% endif %}
+                </p>
+            </div>
+
+            {% if q.verdict %}
+            <div class="rv-verdict
+                {% if q.verdict == 'Excellent' %}excellent
+                {% elif q.verdict == 'Good' %}good
+                {% elif q.verdict == 'Average' %}average
+                {% else %}poor{% endif %}">
+                <i class="fa-solid fa-circle-dot"></i>
+                {{ q.verdict }}
+            </div>
+            {% endif %}
+        </div>
+        {% empty %}
+        <div class="card rv-empty">
+            <i class="fa-regular fa-message"></i>
+            <p>No evaluated questions available yet.</p>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="rv-right">
+
+        <!-- Overall Score -->
+        <div class="card rv-score-card">
+            <h2 class="section-title">Overall Score</h2>
+            <div class="rv-big-score
+                {% if interview.overall_score >= 80 %}excellent
+                {% elif interview.overall_score >= 60 %}good
+                {% elif interview.overall_score >= 40 %}average
+                {% else %}poor{% endif %}">
+                {{ interview.overall_score|default:"—" }}{% if interview.overall_score %}%{% endif %}
+            </div>
+            {% if interview.overall_score %}
+            <div class="progress-bar" style="margin-top:12px;">
+                <div class="progress-fill
+                    {% if interview.overall_score >= 70 %}green
+                    {% elif interview.overall_score >= 50 %}{% else %}red{% endif %}"
+                     style="width:{{ interview.overall_score }}%">
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Skill Averages -->
+        {% if interview.skill_averages %}
+        <div class="card">
+            <h2 class="section-title">Score by Skill</h2>
+            <div class="skill-avg-list">
+                {% for skill, avg in interview.skill_averages.items %}
+                <div class="skill-avg-row">
+                    <span class="skill-avg-name">{{ skill }}</span>
+                    <div class="skill-avg-bar-wrap">
+                        <div class="progress-bar">
+                            <div class="progress-fill
+                                {% if avg >= 70 %}green{% elif avg >= 50 %}{% else %}red{% endif %}"
+                                 style="width:{{ avg }}%"></div>
+                        </div>
+                    </div>
+                    <span class="skill-avg-pct">{{ avg }}%</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Quick stats -->
+        <div class="card">
+            <h2 class="section-title">Session Summary</h2>
+            <div class="rv-summary-list">
+                <div class="rv-summary-row">
+                    <span class="rv-summary-label">Questions</span>
+                    <span class="rv-summary-value">{{ interview.evaluated_questions|length }}</span>
+                </div>
+                <div class="rv-summary-row">
+                    <span class="rv-summary-label">Status</span>
+                    <span class="badge {% if interview.status == 'completed' %}badge-green{% else %}badge-orange{% endif %}">
+                        {{ interview.status|capfirst }}
+                    </span>
+                </div>
+                {% if interview.overall_score %}
+                <div class="rv-summary-row">
+                    <span class="rv-summary-label">Verdict</span>
+                    <span class="rv-summary-value">
+                        {% if interview.overall_score >= 80 %}Excellent
+                        {% elif interview.overall_score >= 60 %}Good
+                        {% elif interview.overall_score >= 40 %}Average
+                        {% else %}Needs Improvement{% endif %}
+                    </span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <a href="{% url 'history' %}" class="btn btn-secondary btn-full">
+            <i class="fa-solid fa-list"></i> All Interviews
+        </a>
+
+    </div>
+</div>
+{% endblock %}
