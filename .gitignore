@@ -20,7 +20,7 @@ uploads/
 *.db
 lmqg_env/
 media/
-
+models/
 
 data/kaggle/Answers.csv
 data/kaggle/Questions.csv
